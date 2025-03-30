@@ -1,0 +1,153 @@
+@import '../../../colors.scss';
+
+/* Estilo para a tela inteira */
+.login-container {
+    display: flex;
+    flex-direction: row;
+    background-color: $background-light;
+    /* Cor de fundo (Bege Claro) */
+    height: 100vh;
+    /* A altura é 100% da tela */
+    justify-content: space-between;
+    /* Garante que as áreas ocupem o espaço corretamente */
+}
+
+/* Área esquerda */
+.left {
+    margin: 90px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    background-color: $card-background-color;
+    /* Cor de fundo (Branco) */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px $shadow-color;
+    /* Cor da sombra suave */
+    margin-right: 20px;
+    text-align: center;
+    /* Centraliza o texto */
+    flex-direction: column;
+}
+
+.left img {
+    width: 340px;
+}
+
+.left h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: $primary-color;
+    /* Título em Azul Tiffany */
+}
+
+.left p {
+    line-height: 1.5;
+    font-size: 1rem;
+    color: $text-primary;
+    /* Texto principal em cinza escuro */
+}
+
+/* Área direita */
+.right {
+    margin: 90px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    /* Cor de fundo (Branco) */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px $shadow-color;
+    /* Cor da sombra suave */
+    margin-left: 20px;
+    background-color: rgb(253 157 158 / 25%);
+}
+
+.login-container-form {
+    width: 100%;
+    max-width: 400px;
+    /* Define um limite de largura para o formulário de login */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centraliza os itens do formulário */
+}
+
+form {
+    margin-top: 80px;
+}
+
+.login-container-form p {
+    color: gray;
+    /* Título do formulário em Azul Tiffany */
+}
+
+.login-container-form h2 {
+    font-size: 2.7rem;
+    margin-bottom: 10px;
+    color: #F55B5C;
+    /* Título do formulário em Azul Tiffany */
+}
+
+.example-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+button {
+    width: 100%;
+}
+
+/* Botões */
+button.mat-raised-button {
+    width: 100%;
+    margin-top: 20px;
+    background-color: $button-primary-bg;
+    /* Cor de fundo do botão principal */
+    color: $button-primary-text;
+
+    /* Cor do texto do botão principal */
+    &:hover {
+        background-color: darken($button-primary-bg, 10%);
+        /* Escurece a cor ao passar o mouse */
+    }
+}
+
+button.secondary-button {
+    background-color: $button-secondary-bg;
+    /* Cor de fundo do botão secundário */
+    color: $button-secondary-text;
+    /* Cor do texto do botão secundário */
+    margin-top: 10px;
+    width: 100%;
+
+    &:hover {
+        background-color: darken($button-secondary-bg, 10%);
+        /* Escurece a cor ao passar o mouse */
+    }
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .left,
+    .right {
+        margin-right: 0;
+        margin-bottom: 20px;
+        margin-left: 0px;
+    }
+
+    .login-container-form {
+        max-width: 100%;
+    }
+}

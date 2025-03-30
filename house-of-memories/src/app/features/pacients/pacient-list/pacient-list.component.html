@@ -1,0 +1,51 @@
+<div class="pacient-container">
+    <h3>Pacientes</h3>
+  
+    <div class="header-actions">
+        <button mat-raised-button color="primary" routerLink="/pacients/new">
+          <mat-icon>add</mat-icon> Cadastrar Novo Paciente
+        </button>
+        <button mat-raised-button color="accent">
+          <mat-icon>download</mat-icon> Exportar
+        </button>
+      </div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 pacient-table">
+      <!-- Código Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>Código</th>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+      </ng-container>
+  
+      <!-- Nome Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Nome</th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
+  
+      <!-- Idade Column -->
+      <ng-container matColumnDef="birthDate">
+        <th mat-header-cell *matHeaderCellDef>Data de nascimento</th>
+        <td mat-cell *matCellDef="let element">{{ element.birthDate | date:'dd/MM/yyyy' }}</td>
+      </ng-container>
+  
+      <!-- Ações Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Ações</th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-button color="accent">
+            <mat-icon>edit</mat-icon> Editar
+          </button>
+          <button mat-button color="accent">
+            <mat-icon>delete</mat-icon> Excluir
+          </button>
+          <button mat-button color="accent">
+            <mat-icon>more_horiz</mat-icon> Mais Ações
+          </button>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  

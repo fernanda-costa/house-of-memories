@@ -1,0 +1,101 @@
+@import '../../../../colors.scss';
+
+table {
+    width: 100%;
+}
+
+
+// Estilos da Tabela
+.pacient-container {
+    h3 {
+        margin-bottom: 30px;
+        font-size: 35px;
+        color: $text-primary;
+      }
+    
+    padding: 40px;
+    border-radius: 8px; // Bordas arredondadas para suavizar o design
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); // Sombra suave
+}
+
+.header-actions {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .header-actions button {
+    margin-right: 20px;
+  }
+  
+  .header-actions mat-icon {
+    margin-right: 8px; // Espaçamento entre ícone e texto
+  }
+  
+.pacient-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+  
+
+    // Estilo das células de cabeçalho
+    th {
+        background-color: $primary-color; // Azul Tiffany
+        color: #ffffff; // Texto branco
+        padding: 12px;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    // Estilo das células de dados
+    td {
+        padding: 12px;
+        text-align: left;
+        color: $text-primary; // Texto principal (cinza escuro)
+    }
+
+    // Estilo das linhas alternadas
+    tr:nth-child(even) {
+        background-color: #FFF9E1; // Fundo para linhas pares
+    }
+
+    // Efeito de ação de botão
+    button {
+        margin-right: 8px;
+    }
+
+    button.mat-button {
+        border-radius: 4px;
+    }
+
+    // Efeito de hover no botão
+    button.mat-button:hover {
+        background-color: $accent-color; // Rosa pastel para hover no botão
+    }
+}
+mat-grid-list {
+    margin-bottom: 20px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  mat-card {
+    margin: 20px 0;
+  }
+  
+  mat-card-header {
+    background-color: #f1f1f1;
+  }
+  
+  mat-card-title {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  mat-icon {
+    margin-right: 10px;
+  }
+  

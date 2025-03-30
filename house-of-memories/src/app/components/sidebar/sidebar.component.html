@@ -1,0 +1,41 @@
+<div class="sidebar" [ngClass]="{ 'expanded': isExpanded }">
+  <!-- Cabeçalho do menu lateral -->
+  <div class="sidebar-header" (click)="toggleMenu()">
+    <mat-icon *ngIf="!isExpanded">menu</mat-icon>
+    <h3 *ngIf="isExpanded">Casa de memórias</h3>
+  </div>
+
+  <!-- Lista de links do menu -->
+  <ul class="sidebar-links">
+    <li *ngIf="isExpanded" routerLink="/"> 
+      <mat-icon>home</mat-icon>
+      <a routerLink="/">Início</a>
+    </li>
+    <li *ngIf="isExpanded" routerLink="/pacients/list">
+      <mat-icon>account_circle</mat-icon>
+      <a routerLink="/pacients">Pacientes</a>
+    </li>
+
+    <li *ngIf="isExpanded">
+      <mat-icon>logout</mat-icon>
+      <a routerLink="/login">Logout</a>
+    </li>
+    <!-- Menu Guardado (apenas ícones) -->
+    <li *ngIf="!isExpanded" routerLink="/">
+      <mat-icon routerLink="/">home</mat-icon>
+    </li>
+    <li *ngIf="!isExpanded" routerLink="/pacients/list">
+      <mat-icon routerLink="/pacients/list">account_circle</mat-icon>
+    </li>
+
+    <li *ngIf="!isExpanded" routerLink="/login">
+      <mat-icon routerLink="/login">logout</mat-icon>
+    </li>
+  </ul>
+
+  <!-- Ícone para esconder/exibir o menu -->
+  <div class="toggle-icon" (click)="toggleMenu()">
+    <mat-icon *ngIf="isExpanded">chevron_left</mat-icon>
+    <mat-icon *ngIf="!isExpanded">chevron_right</mat-icon>
+  </div>
+</div>

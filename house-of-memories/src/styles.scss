@@ -1,0 +1,27 @@
+@import './colors.scss';
+
+
+.btn-primary {
+    background-color: $button-primary-bg;
+    color: $button-primary-text;
+
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+    &:hover {
+        opacity: 0.9;
+        color: $button-primary-text;
+    }
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -1,0 +1,253 @@
+<div class="pacient-form">
+
+    <h2>Cadastrar novo paciente</h2>
+    <!-- Botão de Submit -->
+    <div class="form-section">
+        <button mat-raised-button color="warn" routerLink="/pacients/list">Voltar</button>
+        <button mat-raised-button color="primary">Salvar</button>
+    </div>
+
+    <form [formGroup]="form">
+        <!-- Seção: Informações Pessoais -->
+        <mat-expansion-panel expanded>
+            <mat-expansion-panel-header>
+                <mat-icon>person</mat-icon>
+                <mat-panel-title>Informações Pessoais</mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-card-content>
+                <div class="form-section">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Nome</mat-label>
+                        <input matInput id="nome" formControlName="nome" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>RG</mat-label>
+                        <input matInput id="rg" formControlName="rg" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Dominância Manual</mat-label>
+                        <mat-select id="dominanciaManual" formControlName="dominanciaManual">
+                            <mat-option value="Destro">Destro</mat-option>
+                            <mat-option value="Canhoto">Canhoto</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="form-section">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Faz uso de medicamentos</mat-label>
+                        <mat-select id="fazUsoDeMedicamentos" formControlName="fazUsoDeMedicamentos">
+                            <mat-option value="Sim">Sim</mat-option>
+                            <mat-option value="Não">Não</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Data de Nascimento</mat-label>
+                        <input matInput id="dataNascimento" formControlName="dataNascimento" type="date" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Peso</mat-label>
+                        <input matInput id="peso" formControlName="peso" type="number" />
+                    </mat-form-field>
+                </div>
+
+                <div class="form-section">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Sexo</mat-label>
+                        <mat-select id="sexo" formControlName="sexo">
+                            <mat-option value="Feminino">Feminino</mat-option>
+                            <mat-option value="Masculino">Masculino</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Ano Escolar</mat-label>
+                        <input matInput id="anoEscolar" formControlName="anoEscolar" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>CPF</mat-label>
+                        <input matInput id="cpf" formControlName="cpf" />
+                    </mat-form-field>
+                </div>
+
+                <div class="form-section">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Idade</mat-label>
+                        <input matInput id="idade" formControlName="idade" type="number" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Altura</mat-label>
+                        <input matInput id="altura" formControlName="altura" type="number" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Período</mat-label>
+                        <mat-select id="periodo" formControlName="periodo">
+                            <mat-option value="Manhã">Manhã</mat-option>
+                            <mat-option value="Tarde">Tarde</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </mat-card-content>
+
+        </mat-expansion-panel>
+
+        <!-- Seção: Informações do Pai -->
+        <mat-expansion-panel expanded>
+            <mat-expansion-panel-header>
+                <mat-icon mat-expansion-indicator>family_restroom</mat-icon>
+                <mat-panel-title>Informações do Pai</mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-card-content>
+                <div class="form-section">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Pai</mat-label>
+                        <input matInput id="pai" formControlName="pai" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Grau de Instrução do Pai</mat-label>
+                        <input matInput id="grauInstrucaoPai" formControlName="grauInstrucaoPai" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>CPF do Pai</mat-label>
+                        <input matInput id="cpfPai" formControlName="cpfPai" />
+                    </mat-form-field>
+                </div>
+
+                <div class="form-section">
+                    <mat-form-field appearance="outline">
+                        <mat-label>E-mail do Pai</mat-label>
+                        <input matInput id="emailPai" formControlName="emailPai" type="email" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Profissão do Pai</mat-label>
+                        <input matInput id="profissaoPai" formControlName="profissaoPai" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Celular do Pai</mat-label>
+                        <input matInput id="celularPai" formControlName="celularPai" />
+                    </mat-form-field>
+                </div>
+
+                <div class="form-section">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Empresa do Pai</mat-label>
+                        <input matInput id="empresaPai" formControlName="empresaPai" />
+                    </mat-form-field>
+                </div>
+            </mat-card-content>
+
+        </mat-expansion-panel>
+
+        <!-- Seção: Informações da Mãe -->
+        <mat-expansion-panel expanded>
+            <mat-expansion-panel-header>
+                <mat-icon mat-expansion-indicator>family_restroom</mat-icon>
+                <mat-panel-title>Informações da Mãe</mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-card-content>
+                <div class="form-section">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Mãe</mat-label>
+                        <input matInput id="mae" formControlName="mae" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>CPF da Mãe</mat-label>
+                        <input matInput id="cpfMae" formControlName="cpfMae" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Grau de Instrução da Mãe</mat-label>
+                        <input matInput id="grauInstrucaoMae" formControlName="grauInstrucaoMae" />
+                    </mat-form-field>
+                </div>
+
+                <div class="form-section">
+                    <mat-form-field appearance="outline">
+                        <mat-label>E-mail da Mãe</mat-label>
+                        <input matInput id="emailMae" formControlName="emailMae" type="email" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Profissão da Mãe</mat-label>
+                        <input matInput id="profissaoMae" formControlName="profissaoMae" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Idade da Mãe</mat-label>
+                        <input matInput id="idadeMae" formControlName="idadeMae" type="number" />
+                    </mat-form-field>
+                </div>
+
+                <div class="form-section">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Celular da Mãe</mat-label>
+                        <input matInput id="celularMae" formControlName="celularMae" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Empresa da Mãe</mat-label>
+                        <input matInput id="empresaMae" formControlName="empresaMae" />
+                    </mat-form-field>
+                </div>
+            </mat-card-content>
+        </mat-expansion-panel>
+
+        <!-- Seção: Informações da Instituição de Ensino -->
+        <mat-expansion-panel expanded>
+            <mat-expansion-panel-header>
+                <mat-icon mat-expansion-indicator>school</mat-icon>
+                <mat-panel-title>Informações da Instituição de Ensino</mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-card-content>
+                <div class="form-section">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Instituição de Ensino</mat-label>
+                        <input matInput id="instituicaoEnsino" formControlName="instituicaoEnsino" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Tipo de Instituição de Ensino</mat-label>
+                        <input matInput id="tipoInstituicaoEnsino" formControlName="tipoInstituicaoEnsino" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>E-mail da Instituição de Ensino</mat-label>
+                        <input matInput id="emailInstituicaoEnsino" formControlName="emailInstituicaoEnsino"
+                            type="email" />
+                    </mat-form-field>
+                </div>
+
+                <div class="form-section">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Contato da Instituição de Ensino</mat-label>
+                        <input matInput id="contatoInstituicaoEnsino" formControlName="contatoInstituicaoEnsino" />
+
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Cidade</mat-label>
+                        <input matInput id="cidade" formControlName="cidade" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>CEP</mat-label>
+                        <input matInput id="cep" formControlName="cep" />
+                    </mat-form-field>
+                </div>
+            </mat-card-content>
+        </mat-expansion-panel>
+    </form>
+
+</div>

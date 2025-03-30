@@ -1,0 +1,91 @@
+@import '../../../colors.scss';
+
+/* Estilo para o sidebar */
+.sidebar {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: $header-bg;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+  }
+  
+  /* Estilos quando o menu estiver expandido */
+  .sidebar.expanded {
+    width: 250px;
+  }
+  
+  /* Estilos quando o menu estiver guardado */
+  .sidebar:not(.expanded) {
+    width: 60px; /* A largura do menu guardado */
+  }
+  
+  /* Estilo para o cabeçalho do menu */
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+  }
+  
+  /* Lista de links do menu */
+  .sidebar-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-links li {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .sidebar-links li:hover {
+    background-color: $text-secondary
+  }
+  
+  /* Estilos para os ícones */
+  mat-icon {
+    cursor: pointer;
+  }
+  
+  /* Estilo para os links */
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  a:hover {
+    color: white;
+  }
+
+  li > a {
+    margin-left: 16px;
+  }
+  
+  /* Estilo para o ícone de menu */
+  mat-icon:hover {
+    color: white;
+  }
+  
+  .toggle-icon {
+    margin-top: auto; /* Alinha o ícone na parte inferior */
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $header-bg;
+    color: white;
+  }
+  
+ 

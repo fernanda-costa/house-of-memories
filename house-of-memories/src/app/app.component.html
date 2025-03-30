@@ -1,0 +1,6 @@
+<app-sidebar *ngIf="isLogged"></app-sidebar>
+
+<div [ngClass]="{'logged-in': isLogged}">
+    <router-outlet />
+</div>
+
