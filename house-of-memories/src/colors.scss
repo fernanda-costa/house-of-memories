@@ -1,0 +1,55 @@
+/* Definindo as cores do tema */
+$primary-color: #7F8C64; // Vermelho vibrante
+$secondary-color: #BF8339; // Verde oliva suave
+$accent-color: #D9042B; // Laranja terroso
+
+// Cores para fundo e áreas neutras
+$background-light: #F2F2F2; // Cinza muito claro, neutro
+$background-dark: #BF9075; // Marrom suave
+
+// Cores de texto
+$text-primary: #333333; // Cinza escuro para textos principais
+$text-secondary: #7F8C8D; // Cinza claro para textos secundários
+$text-accent: $accent-color; // Laranja terroso para destacar textos importantes
+
+// Cores de botões
+$button-primary-bg: $primary-color; // Cor de fundo dos botões principais
+$button-primary-text: #ffffff; // Cor do texto dos botões principais
+$button-secondary-bg: $secondary-color; // Cor de fundo dos botões secundários
+$button-secondary-text: #ffffff; // Cor do texto dos botões secundários
+
+// Cores de feedbacks e estados
+$success-color: #2ECC71; // Verde suave para mensagens de sucesso
+$error-color: #E74C3C; // Vermelho para mensagens de erro
+$warning-color: #F39C12; // Amarelo quente para mensagens de alerta
+$info-color: #3498DB; // Azul para mensagens informativas
+
+// Cores para o cabeçalho e rodapé
+$header-bg: $background-dark; // Fundo marrom suave para o cabeçalho
+$footer-bg: $primary-color; // Fundo vermelho vibrante para o rodapé
+
+// Cores para a área de interações e links
+$link-color: $accent-color; // Laranja terroso para links
+$link-hover-color: darken($accent-color, 10%); // Laranja mais escuro para links ao passar o mouse
+
+// Cor de fundo dos cards (áreas onde o conteúdo é exibido)
+$card-background-color: #ffffff; // Branco para o fundo dos cards
+
+// Cor para a sombra (box-shadow)
+$shadow-color: rgba(0, 0, 0, 0.1); // Sombra suave, cinza claro
+
+// Cores adicionais (para usar em outras áreas, se necessário)
+$highlight-color: $accent-color; // Usado para destaque de elementos
+$inactive-color: lighten($secondary-color, 20%); // Verde oliva mais claro para elementos inativos
+
+// Cores de bordas
+$border-color: #D1D1D1; // Cinza claro para bordas
+$border-dark-color: #B0B0B0; // Cinza um pouco mais escuro para bordas
+
+// Outras cores que podem ser necessárias
+$button-warning-bg: $warning-color; // Cor de fundo dos botões de aviso
+$button-success-bg: $success-color; // Cor de fundo dos botões de sucesso
+$button-info-bg: $info-color; // Cor de fundo dos botões de informação
+$button-error-bg: $error-color; // Cor de fundo dos botões de erro
+$button-text-color: #ffffff; // Cor do texto dos botões (branco)
+
