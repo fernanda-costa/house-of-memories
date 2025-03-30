@@ -1,0 +1,150 @@
+
+// Importando o Angular Material para uso do tema
+@use '@angular/material' as mat;
+
+// Incluindo os estilos comuns do Angular Material
+@include mat.core();
+@import './colors.scss';
+
+// Definindo as paletas de cores personalizadas utilizando as cores que você forneceu
+
+$primary-palette: (
+  50: lighten($primary-color, 40%),
+  100: lighten($primary-color, 20%),
+  200: lighten($primary-color, 10%),
+  300: $primary-color,
+  400: darken($primary-color, 10%),
+  500: $primary-color,
+  600: darken($primary-color, 20%),
+  700: darken($primary-color, 30%),
+  800: darken($primary-color, 40%),
+  900: darken($primary-color, 50%),
+  A100: lighten($primary-color, 50%),
+  A200: lighten($primary-color, 30%),
+  A400: lighten($primary-color, 10%),
+  A700: darken($primary-color, 10%),
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+// Definindo a paleta de cor secundária personalizada ($secondary-color)
+$accent-palette: (
+  50: lighten($secondary-color, 40%),
+  100: lighten($secondary-color, 20%),
+  200: lighten($secondary-color, 10%),
+  300: $secondary-color,
+  400: darken($secondary-color, 10%),
+  500: $secondary-color,
+  600: darken($secondary-color, 20%),
+  700: darken($secondary-color, 30%),
+  800: darken($secondary-color, 40%),
+  900: darken($secondary-color, 50%),
+  A100: lighten($secondary-color, 50%),
+  A200: lighten($secondary-color, 30%),
+  A400: lighten($secondary-color, 10%),
+  A700: darken($secondary-color, 10%),
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+// Definindo a paleta de cor de alerta personalizada ($warn-color)
+$warn-palette: (
+  50: lighten($warning-color, 40%),
+  100: lighten($warning-color, 20%),
+  200: lighten($warning-color, 10%),
+  300: $warning-color,
+  400: darken($warning-color, 10%),
+  500: $warning-color,
+  600: darken($warning-color, 20%),
+  700: darken($warning-color, 30%),
+  800: darken($warning-color, 40%),
+  900: darken($warning-color, 50%),
+  A100: lighten($warning-color, 50%),
+  A200: lighten($warning-color, 30%),
+  A400: lighten($warning-color, 10%),
+  A700: darken($warning-color, 10%),
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+// Paleta de cor primária - Azul Tiffany
+$primary: mat.define-palette($primary-palette);
+$accent: mat.define-palette($accent-palette);
+$warn: mat.define-palette($warn-palette);
+
+
+// Criando o objeto de tema (light theme)
+$custom-theme: mat.define-light-theme((
+  color: (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0
+));
+
+// Incluindo os estilos do tema para todos os componentes utilizados
+@include mat.all-component-themes($custom-theme);
+
+@import './colors.scss';
+
+.btn-primary {
+    background-color: $button-primary-bg;
+    color: $button-primary-text;
+
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      opacity: 0.9;
+      color: $button-primary-text;
+    }
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
